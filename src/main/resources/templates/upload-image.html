@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Carregar Imagem</title>
+</head>
+<body>
+<h1>Carregar Imagem</h1>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file"/>
+    <button type="submit">Carregar</button>
+</form>
+<div th:if="${success}">
+    <p th:text="${success}"></p>
+</div>
+<div th:if="${error}">
+    <p th:text="${error}"></p>
+</div>
+<a href="/">Voltar</a>
+</body>
+</html>

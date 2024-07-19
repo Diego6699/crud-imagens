@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Visualizar Imagem</title>
+</head>
+<body>
+<h1 th:text="${image.name}">Imagem</h1>
+<img th:src="'data:image/jpeg;base64,' + ${base64Image}" alt="Imagem"/>
+<a href="/">Voltar</a>
+</body>
+</html>
+

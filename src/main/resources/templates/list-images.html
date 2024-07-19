@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Imagens</title>
+</head>
+<body>
+<h1>Lista de Imagens</h1>
+<a href="/upload">Carregar nova imagem</a>
+<ul>
+    <li th:each="image : ${images}">
+        <a th:href="@{'/image/' + ${image.id}}"
+           th:text="${image.name}">Imagem</a>
+        <a th:href="@{'/delete/' + ${image.id}}">[Excluir]</a>
+    </li>
+</ul>
+</body>
+</html>
